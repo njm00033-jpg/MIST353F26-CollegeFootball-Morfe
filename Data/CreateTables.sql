@@ -6,6 +6,38 @@ CREATE USER NandaSurendra
 FOR LOGIN NandaSurendra;
 ALTER ROLE db_owner ADD MEMBER NandaSurendra;
 */
+IF OBJECT_ID('GamePrediction') IS NOT NULL
+    DROP TABLE GamePrediction;
+
+IF OBJECT_ID('WeeklyPredictionResults') IS NOT NULL
+    DROP TABLE WeeklyPredictionResults;
+
+IF OBJECT_ID('Coach') IS NOT NULL
+    DROP TABLE Coach;
+
+IF OBJECT_ID('Roster') IS NOT NULL
+    DROP TABLE Roster;
+
+IF OBJECT_ID('Player') IS NOT NULL
+    DROP TABLE Player;
+
+IF OBJECT_ID('Position') IS NOT NULL
+    DROP TABLE Position;
+
+IF OBJECT_ID('AppUser') IS NOT NULL
+    DROP TABLE AppUser;
+
+IF OBJECT_ID('Game') IS NOT NULL
+    DROP TABLE Game;
+
+IF OBJECT_ID('Team') IS NOT NULL
+    DROP TABLE Team;
+
+IF OBJECT_ID('Stadium') IS NOT NULL
+    DROP TABLE Stadium;
+
+GO
+
 CREATE TABLE Stadium (
     StadiumID INT NOT NULL IDENTITY(1,1),
     StadiumName VARCHAR(50) NOT NULL,
