@@ -1,33 +1,62 @@
+IF OBJECT_ID('CoachRoster', 'U') IS NOT NULL
+    DROP TABLE CoachRoster;
 
-/*
-CREATE LOGIN NandaSurendra
-WITH PASSWORD = 'MI$T353Instructor';
+IF OBJECT_ID('PlayerPosition', 'U') IS NOT NULL
+    DROP TABLE PlayerPosition;
 
-CREATE USER NandaSurendra
-FOR LOGIN NandaSurendra;
+IF OBJECT_ID('QBStats', 'U') IS NOT NULL
+    DROP TABLE QBStats;
 
-ALTER ROLE db_owner ADD MEMBER NandaSurendra;
-*/
+IF OBJECT_ID('RBStats', 'U') IS NOT NULL
+    DROP TABLE RBStats;
 
-IF OBJECT_ID('PlayerPosition', 'U') IS NOT NULL DROP TABLE PlayerPosition;
-IF OBJECT_ID('QBStats', 'U') IS NOT NULL DROP TABLE QBStats;
-IF OBJECT_ID('RBStats', 'U') IS NOT NULL DROP TABLE RBStats;
-IF OBJECT_ID('DefenderStats', 'U') IS NOT NULL DROP TABLE DefenderStats;
-IF OBJECT_ID('ReturnerStats', 'U') IS NOT NULL DROP TABLE ReturnerStats;
-IF OBJECT_ID('KickerStats', 'U') IS NOT NULL DROP TABLE KickerStats;
-IF OBJECT_ID('PunterStats', 'U') IS NOT NULL DROP TABLE PunterStats;
-IF OBJECT_ID('PlayerStats', 'U') IS NOT NULL DROP TABLE PlayerStats;
-IF OBJECT_ID('GamePrediction', 'U') IS NOT NULL DROP TABLE GamePrediction;
-IF OBJECT_ID('WeeklyPredictionResults', 'U') IS NOT NULL DROP TABLE WeeklyPredictionResults;
-IF OBJECT_ID('Coach', 'U') IS NOT NULL DROP TABLE Coach;
-IF OBJECT_ID('Player', 'U') IS NOT NULL DROP TABLE Player;
-IF OBJECT_ID('Position', 'U') IS NOT NULL DROP TABLE Position;
-IF OBJECT_ID('Roster', 'U') IS NOT NULL DROP TABLE Roster;
-IF OBJECT_ID('AppUser', 'U') IS NOT NULL DROP TABLE AppUser;
-IF OBJECT_ID('Game', 'U') IS NOT NULL DROP TABLE Game;
-IF OBJECT_ID('Team', 'U') IS NOT NULL DROP TABLE Team;
-IF OBJECT_ID('Stadium', 'U') IS NOT NULL DROP TABLE Stadium;
-IF OBJECT_ID('Conference', 'U') IS NOT NULL DROP TABLE Conference;
+IF OBJECT_ID('DefenderStats', 'U') IS NOT NULL
+    DROP TABLE DefenderStats;
+
+IF OBJECT_ID('ReturnerStats', 'U') IS NOT NULL
+    DROP TABLE ReturnerStats;
+
+IF OBJECT_ID('KickerStats', 'U') IS NOT NULL
+    DROP TABLE KickerStats;
+
+IF OBJECT_ID('PunterStats', 'U') IS NOT NULL
+    DROP TABLE PunterStats;
+
+IF OBJECT_ID('PlayerStats', 'U') IS NOT NULL
+    DROP TABLE PlayerStats;
+
+IF OBJECT_ID('GamePrediction', 'U') IS NOT NULL
+    DROP TABLE GamePrediction;
+
+IF OBJECT_ID('WeeklyPredictionResults', 'U') IS NOT NULL
+    DROP TABLE WeeklyPredictionResults;
+
+IF OBJECT_ID('Coach', 'U') IS NOT NULL
+    DROP TABLE Coach;
+
+IF OBJECT_ID('Player', 'U') IS NOT NULL
+    DROP TABLE Player;
+
+IF OBJECT_ID('Position', 'U') IS NOT NULL
+    DROP TABLE Position;
+
+IF OBJECT_ID('Roster', 'U') IS NOT NULL
+    DROP TABLE Roster;
+
+IF OBJECT_ID('AppUser', 'U') IS NOT NULL
+    DROP TABLE AppUser;
+
+IF OBJECT_ID('Game', 'U') IS NOT NULL
+    DROP TABLE Game;
+
+IF OBJECT_ID('Team', 'U') IS NOT NULL
+    DROP TABLE Team;
+
+IF OBJECT_ID('Stadium', 'U') IS NOT NULL
+    DROP TABLE Stadium;
+
+IF OBJECT_ID('Conference', 'U') IS NOT NULL
+    DROP TABLE Conference;
 
 GO
 
@@ -131,7 +160,8 @@ CREATE TABLE WeeklyPredictionResults (
     CONSTRAINT PK_WeeklyPredictionResults
         PRIMARY KEY (WeeklyPredictionResultsID),
     CONSTRAINT FK_WeeklyPredictionResults_AppUser
-        FOREIGN KEY (AppUserID) REFERENCES AppUser(AppUserID),
+        FOREIGN KEY (AppUserID)
+        REFERENCES AppUser(AppUserID),
     CONSTRAINT UQ_WeeklyPredictionResults
         UNIQUE (AppUserID, StartDate),
     CONSTRAINT CK_WeeklyPredictionResults_Correct
@@ -183,13 +213,13 @@ GO
 
 CREATE TABLE Roster (
     RosterID INT NOT NULL IDENTITY(1,1),
-    Year INT NOT NULL,
+    [Year] INT NOT NULL,
     SeasonWins INT NOT NULL,
     SeasonLosses INT NOT NULL,
     SeasonTies INT NOT NULL,
     TeamID INT NOT NULL,
     CONSTRAINT PK_Roster PRIMARY KEY (RosterID),
-    CONSTRAINT UQ_Roster UNIQUE (TeamID, Year),
+    CONSTRAINT UQ_Roster UNIQUE (TeamID, [Year]),
     CONSTRAINT FK_Roster_Team FOREIGN KEY (TeamID)
         REFERENCES Team(TeamID),
     CONSTRAINT CK_Roster_Record CHECK (
@@ -210,13 +240,17 @@ CREATE TABLE GamePrediction (
     PredictedTeamID INT NOT NULL,
     CONSTRAINT PK_GamePrediction PRIMARY KEY (GamePredictionID),
     CONSTRAINT FK_GamePrediction_AppUser
-        FOREIGN KEY (AppUserID) REFERENCES AppUser(AppUserID),
+        FOREIGN KEY (AppUserID)
+        REFERENCES AppUser(AppUserID),
     CONSTRAINT FK_GamePrediction_Game
-        FOREIGN KEY (GameID) REFERENCES Game(GameID),
+        FOREIGN KEY (GameID)
+        REFERENCES Game(GameID),
     CONSTRAINT FK_GamePrediction_PredictedTeam
-        FOREIGN KEY (PredictedTeamID) REFERENCES Team(TeamID),
+        FOREIGN KEY (PredictedTeamID)
+        REFERENCES Team(TeamID),
     CONSTRAINT UQ_GamePrediction UNIQUE (AppUserID, GameID),
-    CONSTRAINT CK_GamePrediction_Margin CHECK (PredictedMargin >= 0)
+    CONSTRAINT CK_GamePrediction_Margin
+        CHECK (PredictedMargin >= 0)
 );
 
 GO
@@ -228,9 +262,13 @@ CREATE TABLE PlayerStats (
     Position VARCHAR(50) NOT NULL,
     CONSTRAINT PK_PlayerStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_PlayerStats_Player
-        FOREIGN KEY (PlayerID) REFERENCES Player(PlayerID),
+        FOREIGN KEY (PlayerID)
+        REFERENCES Player(PlayerID),
     CONSTRAINT FK_PlayerStats_Roster
-        FOREIGN KEY (RosterID) REFERENCES Roster(RosterID)
+        FOREIGN KEY (RosterID)
+        REFERENCES Roster(RosterID),
+    CONSTRAINT UQ_PlayerStats_PlayerRosterPosition
+        UNIQUE (PlayerID, RosterID, Position)
 );
 
 GO
@@ -244,7 +282,8 @@ CREATE TABLE QBStats (
     INTs INT NOT NULL,
     CONSTRAINT PK_QBStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_QBStats_PlayerStats
-        FOREIGN KEY (PlayerStatsID) REFERENCES PlayerStats(PlayerStatsID),
+        FOREIGN KEY (PlayerStatsID)
+        REFERENCES PlayerStats(PlayerStatsID),
     CONSTRAINT CK_QBStats CHECK (
         Attempts >= 0
         AND Completions >= 0
@@ -261,15 +300,16 @@ CREATE TABLE RBStats (
     Carries INT NOT NULL,
     Yards INT NOT NULL,
     TDs INT NOT NULL,
-    Long INT NOT NULL,
+    [Long] INT NOT NULL,
     Fumbles INT NOT NULL,
     CONSTRAINT PK_RBStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_RBStats_PlayerStats
-        FOREIGN KEY (PlayerStatsID) REFERENCES PlayerStats(PlayerStatsID),
+        FOREIGN KEY (PlayerStatsID)
+        REFERENCES PlayerStats(PlayerStatsID),
     CONSTRAINT CK_RBStats CHECK (
         Carries >= 0
         AND TDs >= 0
-        AND Long >= 0
+        AND [Long] >= 0
         AND Fumbles >= 0
     )
 );
@@ -284,7 +324,8 @@ CREATE TABLE DefenderStats (
     DefensiveTDs INT NOT NULL,
     CONSTRAINT PK_DefenderStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_DefenderStats_PlayerStats
-        FOREIGN KEY (PlayerStatsID) REFERENCES PlayerStats(PlayerStatsID),
+        FOREIGN KEY (PlayerStatsID)
+        REFERENCES PlayerStats(PlayerStatsID),
     CONSTRAINT CK_DefenderStats CHECK (
         Tackles >= 0
         AND Sacks >= 0
@@ -307,7 +348,8 @@ CREATE TABLE ReturnerStats (
     PuntReturnTDs INT NOT NULL,
     CONSTRAINT PK_ReturnerStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_ReturnerStats_PlayerStats
-        FOREIGN KEY (PlayerStatsID) REFERENCES PlayerStats(PlayerStatsID),
+        FOREIGN KEY (PlayerStatsID)
+        REFERENCES PlayerStats(PlayerStatsID),
     CONSTRAINT CK_ReturnerStats CHECK (
         KickOffAttempts >= 0
         AND KickOffLong >= 0
@@ -324,17 +366,18 @@ CREATE TABLE KickerStats (
     PlayerStatsID INT NOT NULL,
     FieldGoalAttempts INT NOT NULL,
     FieldGoalsMade INT NOT NULL,
-    Long INT NOT NULL,
+    [Long] INT NOT NULL,
     ExtraPointAttempts INT NOT NULL,
     ExtraPointsMade INT NOT NULL,
     CONSTRAINT PK_KickerStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_KickerStats_PlayerStats
-        FOREIGN KEY (PlayerStatsID) REFERENCES PlayerStats(PlayerStatsID),
+        FOREIGN KEY (PlayerStatsID)
+        REFERENCES PlayerStats(PlayerStatsID),
     CONSTRAINT CK_KickerStats CHECK (
         FieldGoalAttempts >= 0
         AND FieldGoalsMade >= 0
         AND FieldGoalsMade <= FieldGoalAttempts
-        AND Long >= 0
+        AND [Long] >= 0
         AND ExtraPointAttempts >= 0
         AND ExtraPointsMade >= 0
         AND ExtraPointsMade <= ExtraPointAttempts
@@ -347,14 +390,15 @@ CREATE TABLE PunterStats (
     PlayerStatsID INT NOT NULL,
     Punts INT NOT NULL,
     Yards INT NOT NULL,
-    Long INT NOT NULL,
+    [Long] INT NOT NULL,
     CONSTRAINT PK_PunterStats PRIMARY KEY (PlayerStatsID),
     CONSTRAINT FK_PunterStats_PlayerStats
-        FOREIGN KEY (PlayerStatsID) REFERENCES PlayerStats(PlayerStatsID),
+        FOREIGN KEY (PlayerStatsID)
+        REFERENCES PlayerStats(PlayerStatsID),
     CONSTRAINT CK_PunterStats CHECK (
         Punts >= 0
         AND Yards >= 0
-        AND Long >= 0
+        AND [Long] >= 0
     )
 );
 
@@ -366,10 +410,28 @@ CREATE TABLE PlayerPosition (
     PositionID INT NOT NULL,
     CONSTRAINT PK_PlayerPosition PRIMARY KEY (PlayerPositionID),
     CONSTRAINT FK_PlayerPosition_Player
-        FOREIGN KEY (PlayerID) REFERENCES Player(PlayerID),
+        FOREIGN KEY (PlayerID)
+        REFERENCES Player(PlayerID),
     CONSTRAINT FK_PlayerPosition_Position
-        FOREIGN KEY (PositionID) REFERENCES Position(PositionID),
+        FOREIGN KEY (PositionID)
+        REFERENCES Position(PositionID),
     CONSTRAINT UQ_PlayerPosition UNIQUE (PlayerID, PositionID)
+);
+
+GO
+
+CREATE TABLE CoachRoster (
+    CoachRosterID INT NOT NULL IDENTITY(1,1),
+    CoachID INT NOT NULL,
+    RosterID INT NOT NULL,
+    CONSTRAINT PK_CoachRoster PRIMARY KEY (CoachRosterID),
+    CONSTRAINT FK_CoachRoster_Coach
+        FOREIGN KEY (CoachID)
+        REFERENCES Coach(CoachID),
+    CONSTRAINT FK_CoachRoster_Roster
+        FOREIGN KEY (RosterID)
+        REFERENCES Roster(RosterID),
+    CONSTRAINT UQ_CoachRoster UNIQUE (CoachID, RosterID)
 );
 
 GO
