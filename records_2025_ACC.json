@@ -1,0 +1,869 @@
+[
+  {
+    "year": 2025,
+    "teamId": 24,
+    "team": "Stanford",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 4.170132111292332,
+    "total": {
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 3,
+      "losses": 5,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 6,
+      "wins": 0,
+      "losses": 6,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 25,
+    "team": "California",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 6.397330807521939,
+    "total": {
+      "games": 13,
+      "wins": 7,
+      "losses": 6,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 7,
+      "losses": 5,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 52,
+    "team": "Florida State",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 6.490813504904509,
+    "total": {
+      "games": 12,
+      "wins": 5,
+      "losses": 7,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 5,
+      "losses": 2,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 0,
+      "losses": 5,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 5,
+      "losses": 7,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 59,
+    "team": "Georgia Tech",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 7.770543862134218,
+    "total": {
+      "games": 13,
+      "wins": 9,
+      "losses": 4,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 5,
+      "losses": 1,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 4,
+      "losses": 1,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 9,
+      "losses": 3,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 97,
+    "team": "Louisville",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 9.412411347031593,
+    "total": {
+      "games": 13,
+      "wins": 9,
+      "losses": 4,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 8,
+      "wins": 5,
+      "losses": 3,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 8,
+      "losses": 4,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 103,
+    "team": "Boston College",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 4.330866312608123,
+    "total": {
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 1,
+      "losses": 7,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 1,
+      "losses": 6,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 150,
+    "team": "Duke",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 7.618905023438856,
+    "total": {
+      "games": 14,
+      "wins": 9,
+      "losses": 5,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 3,
+      "losses": 3,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 6,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 13,
+      "wins": 8,
+      "losses": 5,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 152,
+    "team": "NC State",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 7.417908757925034,
+    "total": {
+      "games": 13,
+      "wins": 8,
+      "losses": 5,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 7,
+      "losses": 5,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 153,
+    "team": "North Carolina",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 5.263048570603132,
+    "total": {
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 154,
+    "team": "Wake Forest",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 8.679102960973978,
+    "total": {
+      "games": 13,
+      "wins": 9,
+      "losses": 4,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 5,
+      "losses": 2,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 3,
+      "losses": 2,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 8,
+      "losses": 4,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 183,
+    "team": "Syracuse",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 2.529113403754309,
+    "total": {
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 1,
+      "losses": 7,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 221,
+    "team": "Pittsburgh",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 8.68780706031248,
+    "total": {
+      "games": 13,
+      "wins": 8,
+      "losses": 5,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 4,
+      "losses": 3,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 4,
+      "losses": 1,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 8,
+      "losses": 4,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 228,
+    "team": "Clemson",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 7.953321946784854,
+    "total": {
+      "games": 13,
+      "wins": 7,
+      "losses": 6,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 4,
+      "losses": 1,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 7,
+      "losses": 5,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 258,
+    "team": "Virginia",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 9.324167450889945,
+    "total": {
+      "games": 14,
+      "wins": 11,
+      "losses": 3,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 7,
+      "losses": 1,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 4,
+      "losses": 1,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 13,
+      "wins": 10,
+      "losses": 3,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 259,
+    "team": "Virginia Tech",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 3.481005109846592,
+    "total": {
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 2390,
+    "team": "Miami",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 13.840311659500003,
+    "total": {
+      "games": 16,
+      "wins": 13,
+      "losses": 3,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 8,
+      "wins": 7,
+      "losses": 1,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 5,
+      "wins": 4,
+      "losses": 1,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 10,
+      "losses": 2,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 4,
+      "wins": 3,
+      "losses": 1,
+      "ties": 0
+    }
+  },
+  {
+    "year": 2025,
+    "teamId": 2567,
+    "team": "SMU",
+    "classification": "fbs",
+    "conference": "ACC",
+    "division": "",
+    "expectedWins": 9.20283108484,
+    "total": {
+      "games": 13,
+      "wins": 9,
+      "losses": 4,
+      "ties": 0
+    },
+    "conferenceGames": {
+      "games": 8,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0
+    },
+    "homeGames": {
+      "games": 6,
+      "wins": 5,
+      "losses": 1,
+      "ties": 0
+    },
+    "awayGames": {
+      "games": 6,
+      "wins": 3,
+      "losses": 3,
+      "ties": 0
+    },
+    "neutralSiteGames": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    "regularSeason": {
+      "games": 12,
+      "wins": 8,
+      "losses": 4,
+      "ties": 0
+    },
+    "postseason": {
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    }
+  }
+]
